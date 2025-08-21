@@ -57,7 +57,7 @@
     /* ===== Hero/About Section ===== */
     .hero {
       text-align: center;
-      padding: 20px 20px 20px;
+      padding: 10px 10px 10px;
     }
 
     .hero h1 {
@@ -101,50 +101,7 @@
     main a:hover {
       text-decoration: underline;
     }
-    .profile-image img {
-      width: 80vw;              /* Responsive width */
-      max-width: 350px;        /* Optional: prevent it from getting too big */
-      height: auto;
-      border-radius: 15px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-bottom: 10px;
-    }
 
-    /* ===== Info Grid ===== */
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-
-    .info-block {
-      background-color: #36454f;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .info-block:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-    }
-
-    .info-block h2 {
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-      color: #ffc000;
-    }
-
-    .info-block p {
-      font-size: 1rem;
-      color: #cfcfcf;
-      line-height: 1.6;
-    }
     /* ===== Footer ===== */
     footer {
       padding: 20px;
@@ -158,9 +115,9 @@
     .resume-container {
       display: flex;
       justify-content: center;   /* keeps it centered */
-      width: 90%;               /* let it take full page width */
+      width: 100%;               /* let it take full page width */
       max-width: none;           /* remove the artificial cap */
-      margin: 20px auto;         /* spacing above/below */
+      margin: 10px auto;         /* spacing above/below */
     }
 
     iframe {
@@ -172,7 +129,7 @@
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        padding: 20px;
+        padding: 10px;
       }
       nav {
         margin-top: 10px;
@@ -218,7 +175,7 @@
           iframe.style.height = (window.innerHeight - 150) + "px";
         } else {
           // Desktop: taller view, but not infinite
-          iframe.style.height = "1000px";
+          iframe.style.height = "1200px";
         }
       }
 
