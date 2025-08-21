@@ -157,15 +157,14 @@
 
     .resume-container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+      justify-content: center;   /* keeps it centered */
+      width: 90%;               /* let it take full page width */
+      max-width: none;           /* remove the artificial cap */
+      margin: 20px auto;         /* spacing above/below */
     }
 
     iframe {
-      width: 90%;
-      height: 90vh;
-      max-width: 1200px;   /* keeps it clean on desktop */
+      width: 100%;
       border: none;
     }
 
