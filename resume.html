@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dan Brogan | Contact</title>
+  <title>Dan Brogan | Resume</title>
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   <style>
     /* ===== Base Styles ===== */
@@ -155,6 +155,37 @@
       margin-top: 60px;
     }
 
+    .resume-container {
+      background-color: #1a1d26;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      padding: 20px;
+    }
+
+    .resume-container iframe {
+      width: 100%;
+      height: 800px; /* desktop default */
+      border: none;
+      border-radius: 8px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 12px 25px;
+      background-color: #00d4ff;
+      color: #0b0c10;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    .download-btn:hover {
+      background-color: #00a3c4;
+    }
+
+
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
       header {
@@ -174,6 +205,9 @@
       .hero h1 {
         font-size: 2rem;
       }
+      .resume-container iframe {
+        height: 500px; /* smaller height on mobile */
+      }
     }
   </style>
 </head>
@@ -183,19 +217,21 @@
     <nav>
       <a href="index.html">HOME</a>
       <a href="projects.html">ENGINEERING PROJECTS</a>
-      <a href="resume.html">RESUME</a>
-      <a href="contact.html" class="active">CONTACT</a>
+      <a href="resume.html" class="active">RESUME</a>
+      <a href="contact.html">CONTACT</a>
     </nav>
   </header>
 
   <main>
     <h1>Contact</h1>
 
-    <p>
-      danbrogan401@gmail.com
-    </p>
-
-    <div><a href="https://www.linkedin.com/in/dan-brogan-442b27128/" target="_blank">LinkedIn</a></div>
+    <div class="resume-container">
+      <!-- Embed PDF -->
+      <iframe src="./files/Dan_Brogan_Resume_2025.pdf"></iframe>
+    </div>
+    <a href="./files/Dan_Brogan_Resume_2025.pdf" download class="download-btn">
+      Download Resume
+    </a>
 
   </main>
 
