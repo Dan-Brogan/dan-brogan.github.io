@@ -130,6 +130,30 @@
       width: 100%;
       border: none;
     }
+  
+    .project-description {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: left;
+      color: #ffffff; /* or a contrasting color for your background */
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .project-description h1 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #ffc000;
+    }
+
+    .project-description ul {
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .project-description li {
+      margin-bottom: 10px;
+    }
 
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
@@ -171,7 +195,21 @@
 
   <main>
 
-    <h>Lunar Rover Concept Architecture: Robotic Remote-Sensing Scout (R2-S2)</h>
+    <h><b>Lunar Rover Concept Architecture: Robotic Remote-Sensing Scout (R2-S2)</b></h>
+
+    <section class="project-description">
+      <h1>R2-S2: Robotic Remote-Sensing Scout – Lunar Rover Concept</h1>
+      <p>
+        This concept project from USC’s ASTE 527 course proposes <b>R2-S2</b>, a versatile robotic rover designed to assist lunar EVA crews on Artemis missions. It operates in two modes:
+      </p>
+      <ul>
+        <li><b>Teleoperated mode</b> – remotely assesses EVA mission safety and conducts tasks that would otherwise require crewed operations.</li>
+        <li><b>Autonomous crew-assist mode</b> – supports astronauts during EVAs by livestreaming operations, carrying tools, collecting samples, and performing in-situ sensor tasks.</li>
+      </ul>
+      <p>
+        R2-S2 is designed for <b>equatorial and polar missions</b>, with configurable solar panels, wheel width, and battery insulation. Its primary goal is to <b>reduce mission risk and enhance crew safety and productivity</b> on the lunar surface.
+      </p>
+    </section>
 
     <div class="pdf-container">
     <iframe id="pdf-frame" src="files/lunar_rover.pdf"></iframe>
