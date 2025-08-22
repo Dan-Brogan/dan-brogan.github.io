@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dan Brogan | Lunar Rover</title>
+  <title>Dan Brogan | Lunar Base</title>
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   <style>
     /* ===== Base Styles ===== */
@@ -155,6 +155,14 @@
       margin-bottom: 10px;
     }
 
+    .project-image img {
+      display: block;
+      width: 100%;
+      height: auto;     /* keeps aspect ratio */
+      margin: 10px 0;   /* adds breathing room above & below */
+      border-radius: 5px; /* optional: slight rounded corners */
+    }
+
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
       header {
@@ -197,9 +205,9 @@
 
     <section class="project-description">
 
-      <h1>Lunar Rover Concept Architecture: Robotic Remote-Sensing Scout (R2-S2)</h1>
+      <h1>Lunar South Pole Base Design</h1>
       <p>
-        This concept project from USC’s ASTE 527 course proposes <b>R2-S2</b>, a versatile robotic rover designed to assist lunar EVA crews on Artemis missions. It operates in two modes:
+        This concept project from USC’s ASTE 524 course proposes <b>R2-S2</b>, a versatile robotic rover designed to assist lunar EVA crews on Artemis missions. It operates in two modes:
       </p>
       <ul>
         <li><b>Teleoperated mode</b> – remotely assesses EVA mission safety and conducts tasks that would otherwise require crewed operations.</li>
@@ -210,8 +218,12 @@
       </p>
     </section>
 
+    <section class="project-image">
+      <img src="images/conops.jpg" alt="Concept of Operations">
+    </section>
+
     <div class="pdf-container">
-    <iframe id="pdf-frame" src="files/lunar_rover.pdf"></iframe>
+    <iframe id="pdf-frame" src="files/lunar_base.pdf"></iframe>
 
     </div>
 
