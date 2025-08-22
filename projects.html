@@ -129,9 +129,16 @@
       position: absolute;
       bottom: 20px;
       left: 20px;
-      color: #ffc000;
+      color: #ffc000; /* gold text */
       margin: 0;
       z-index: 1;
+
+      /* black outline using multiple shadows */
+      text-shadow: 
+        -2px -2px 0 #000,  
+        2px -2px 0 #000,
+        -2px  2px 0 #000,
+        2px  2px 0 #000; 
     }
 
     .info-block p {
