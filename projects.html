@@ -83,7 +83,7 @@
     /* ===== Info Grid ===== */
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, 1fr); /* exactly 3 per row */
       gap: 30px;
       max-width: 1200px;
       margin: 20px auto;
@@ -97,9 +97,8 @@
 
     .info-block {
       position: relative;
-      background-size: cover;
-      background-position: center;
-      width: 375px;
+      width: 100%;
+      aspect-ratio: 16 / 9;   /* keeps the tile 16:9 automatically */
       border-radius: 15px;
       overflow: hidden;
       cursor: pointer;
@@ -109,8 +108,8 @@
     .info-block img {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* show the whole image */
-      background-color: #000; /* optional: fills gaps with black */
+      object-fit: cover; /* fills the 16:9 box nicely */
+      background-color: #000;
     }
 
    .info-block::before {
