@@ -86,12 +86,27 @@
       padding: 0 20px;
     }
 
+    .info-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .info-block {
-      background-color: #36454f;
-      padding: 20px;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      height: 250px;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      overflow: hidden;
+      cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+   .info-block::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
     }
 
     .info-block:hover {
@@ -100,16 +115,25 @@
     }
 
     .info-block h2 {
-      font-size: 1.4rem;
-      margin-bottom: 15px;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
       color: #ffc000;
+      margin: 0;
+      z-index: 1;
     }
 
     .info-block p {
-      font-size: 1rem;
-      color: #cfcfcf;
-      line-height: 1.6;
+      display: none; /* hidden until expanded */
+      z-index: 1;
+      position: absolute;
+      bottom: 60px;
+      left: 20px;
+      right: 20px;
+      color: #fff;
+      font-size: 0.9rem;
     }
+
     /* ===== Footer ===== */
     footer {
       padding: 20px;
@@ -164,37 +188,26 @@
 
     <section class="info-grid">
 
-      <div class="info-block">
-        <h2>Lunar Rover Concept Architecture: Robotic Remote-Sensing Scout (R2-S2)</h2>
-        <p>
-          ➢ Lunar astronaut-assisting rover concept
-        </p>
+      <a href="projects/lunar_rover.html" class="info-block">
+        <img src="images/lunar_rover.jpg" alt="Lunar Rover Concept">
+        <h2>Lunar Rover Concept Architecture: R2-S2</h2>
+        <p>➢ Lunar astronaut-assisting rover concept</p>
+      </a>
 
-      </div>
+      <a href="projects/lunar_base.html" class="info-block">
+        <img src="images/lunar_base.jpg" alt="Lunar Base Mission">
+        <h2>Lunar Base Mission Design</h2>
+        <p>➢ Lunar south pole</p>
+      </a>
 
-      <div class="info-block">
-        <h2>📐 Professional Skills</h2>
-        <p>
-          ➢ <b>Leadership</b> <br />
-          ➢ <b>Teamwork</b> <br />
-          ➢ <b>Teaching</b> <br />
-          ➢ <b>Product Design</b> <br />
-          ➢ <b>Engineering Analysis</b> <br />
-          ➢ <b>Manufacturing</b>
-        </p>
-      </div>
+      <a href="projects/titan_edl.html" class="info-block">
+        <img src="images/titan_edl.jpg" alt="Titan EDL Mission">
+        <h2>Titan EDL Mission Design</h2>
+        <p>➢ Submarine mission to Saturnian moon</p>
+      </a>
 
-      <div class="info-block">
-        <h2>🔭 Hobbies & Interests</h2>
-        <p>
-          ➢ <b>Prop-Making</b> <br />
-          ➢ <b>Vintage Electronics</b> <br />
-          ➢ <b>Bass Guitar</b> <br />
-          ➢ <b>Trivia</b> <br />
-          ➢ <b>Backpacking</b> <br />
-          ➢ <b>Astronomy</b>
-        </p>
-      </div>
+
+
     </section>
 
   </main>
