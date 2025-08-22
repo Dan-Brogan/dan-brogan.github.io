@@ -70,22 +70,6 @@
       color: #000000;
     }
 
-    .profile-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    }
-
-    .profile-image img {
-      width: 80vw;              /* Responsive width */
-      max-width: 350px;        /* Optional: prevent it from getting too big */
-      height: auto;
-      border-radius: 15px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-bottom: 10px;
-    }
-
     /* ===== Info Grid ===== */
     .info-grid {
       display: grid;
@@ -154,9 +138,12 @@
 </head>
 <body>
   <header>
-    <div class="site-name">DAN BROGAN</div>
+    <div class="site-name">
+      <a href="index.html">DAN BROGAN</a>
+    </div>
     <nav>
-      <a href="projects.html">ENGINEERING PROJECTS</a>
+      <a href="index.html">HOME</a>
+      <a href="projects.html" class="active">ENGINEERING PROJECTS</a>
       <a href="resume.html">RESUME</a>
       <a href="contact.html">CONTACT</a>
     </nav>
@@ -164,27 +151,19 @@
 
   <main>
     <section class="hero">
-      <div class="profile-image">
-        <img src="images/profile.jpg" alt="profile" />
-      </div>
       <p>
-        <b> Welcome to my personal website! 
-          Here you can get an overview of my background in Mechanical, Robotics, and Astronautical Engineering.</b>
+        <b> Click on a tile to learn more about a project. </b>
       </p>
     </section>
 
     <section class="info-grid">
 
       <div class="info-block">
-        <h2>🎓 Education</h2>
+        <h2>Lunar Rover Concept Architecture: Robotic Remote-Sensing Scout (R2-S2)</h2>
         <p>
-          ➢ <b>University of Southern California (USC)</b><br />
-          &emsp;&emsp; <i> M.S. Astronautical Engineering (2021)</i> <br />
+          ➢ Lunar astronaut-assisting rover concept
         </p>
-        <p>
-          ➢ <b>University of Rhode Island (URI)</b><br />
-          &emsp;&emsp; <i> B.S. Mechanical Engineering (2020)</i> <br />
-        </p>
+
       </div>
 
       <div class="info-block">
