@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dan Brogan | Pulse Jet Engine</title>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+  <style>
+    /* ===== Base Styles ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #536878;
+      color: #000000;
+    }
+
+    /* ===== Header/Nav ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #79D7BE;
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1f1f24;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    .site-name {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000000;
+    letter-spacing: 1px;
+    }
+
+    .site-name a {
+      text-decoration: none;
+      color: inherit;    /* matches the header text color */
+      font-weight: 800;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #FF4B33; /* accent color */
+    }
+
+    nav a.active {
+      color: #FF4B33;
+    }
+
+    /* ===== Hero/About Section ===== */
+    .hero {
+      text-align: center;
+      padding: 10px 10px 10px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #000000;
+    }
+
+    .profile-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px 20px;
+      gap: 20px;
+      font-size: 1.2rem;
+    }
+    main h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main a {
+      color: #40E0D0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #000000;
+      border-top: 1px solid #1f1f24;
+      margin-top: 60px;
+    }
+
+    .pdf-container {
+      display: flex;
+      justify-content: center;   /* keeps it centered */
+      width: 80%;               /* let it take full page width */
+      max-width: none;           /* remove the artificial cap */
+      margin: 10px auto;         /* spacing above/below */
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+    }
+  
+    .project-description {
+      max-width: 1000px;
+      margin: 10px auto;
+      text-align: left;
+      color: #ffffff; /* or a contrasting color for your background */
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .project-description h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #ffc000;
+    }
+
+    .project-description ul {
+      padding-left: 20px;
+      margin-bottom: 5px;
+    }
+
+    .project-description li {
+      margin-bottom: 10px;
+    }
+
+    .project-image {
+      text-align: center;
+      margin: 10px 0; /* optional spacing */
+    }
+
+    .project-image img {
+      max-width: 50%; /* makes it responsive */
+      height: auto;
+      border-radius: 15px; /* optional: slight rounded corners */
+    }
+
+    .gallery {
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 1200px; /* keeps it from stretching too wide on huge screens */
+    }
+
+    .gallery h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    /* Make sure images scale but keep aspect ratio */
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border: 2px solid black; /* optional outline */
+      border-radius: 15px;      /* optional rounded corners */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      object-fit: contain;
+    }
+
+    /* Special case: make Pulse9 span full width */
+    .gallery-grid img.wide {
+      grid-column: 1 / -1;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center; /* center everything horizontally */
+      }
+      nav {
+        margin-top: 10px;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center; /* <-- add this */
+      }
+      nav a {
+        margin: 0;
+        font-size: 1rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-name">
+      <a href="index.html">DAN BROGAN</a>
+    </div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="projects.html">ENGINEERING PROJECTS</a>
+      <a href="resume.html">RESUME</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="project-description">
+
+      <h1>Pulse Jet Engine</h1>
+      <p>
+         This project was inspired by famous youtuber Colin Furze and his various pulse jet projects. A Lockwood-Hiller pulse jet design is used in this project. This design has no moving parts and works by alternating air intake and exhaust cycles (pulses) through each of it's tail pipes. The combustion process works as follows:
+      <ul>
+        <li>Air flows into the shorter pipe as fuel is injected into the combustion chamber</li>
+        <li>A spark plug or match ignites the fuel-air mixture within the combustion chamber, which explodes the mixture and pushes exhaust out of the shorter pipe first</li>
+        <li>Next, the shorter pipe intakes air as a result of the negative pressure differential within the pipe caused by exhausting the gases while the longer pipe pushes exhaust out. Each time air is sucked back into the combustion chamber, the flame front is also sucked back, thus reigniting the fuel-air mixture</li>
+        <li>The shorter and longer tail pipes continue to intake and exhaust in an alternating pattern. This results in a loud roaring sound</li>
+      </ul>
+        The pulse jet is constructed entirely of 1/16 inch thick 304 stainless steel. The plumbing is very simple and consists of a propane tank and needle valve leading to a fuel rod that directly injects into the combustion chamber. Just about any fuel works in a pulse jet; however, it must be atomized before reaching the combustion chamber. Propane was chosen because it is already an atomized gas.
+      </p>
+
+    </section>
+
+    <section class="gallery">
+      <h2>Manufacturing Process Gallery</h2>
+
+      <div class="gallery-grid">
+        <!-- Row 1: 2 landscape -->
+        <img src="Pulse1.png" alt="Pulse 1">
+        <img src="Pulse2.png" alt="Pulse 2">
+
+        <!-- Row 2: 3 portrait -->
+        <img src="Pulse3.png" alt="Pulse 3">
+        <img src="Pulse4.png" alt="Pulse 4">
+        <img src="Pulse5.png" alt="Pulse 5">
+
+        <!-- Row 3: 3 portrait -->
+        <img src="Pulse6.png" alt="Pulse 6">
+        <img src="Pulse7.png" alt="Pulse 7">
+        <img src="Pulse8.png" alt="Pulse 8">
+
+        <!-- Row 4: 1 wide landscape -->
+        <img src="Pulse9.png" alt="Pulse 9" class="wide">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Daniel Brogan — All Rights Reserved
+  </footer>
+</body>
+</html>
