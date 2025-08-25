@@ -108,15 +108,6 @@
       text-decoration: underline;
     }
 
-    .abstract-image img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 10px auto;
-      border: 1px solid #ccc; /* subtle border */
-      border-radius: 15px;     /* rounded corners */
-    }
-
     /* ===== Footer ===== */
     footer {
       padding: 20px;
@@ -206,20 +197,54 @@
 
     <section class="project-description">
 
-      <h1>NASA Deep Learning Computer Vision</h1>
+      <h1>Titan Entry, Descent, & Landing Mission Design</h1>
 
       <p>
-        This project investigated the use of deep learning computer vision for the task of fastener detection. 
-        Resulting from this work is a published paper available through <a href="https://www.sciencedirect.com/science/article/pii/S2590005621000394?via%3Dihub">this link</a> 
-        (abstract below) and an annotated dataset of cross-recessed-screws available through <a href="https://github.com/Dan-Brogan/Cross-Recessed-Screw_Deep-Learning-Datasets">this link</a>. 
-        This work was funded by the NASA Rhode Island Space Grant and supported by the URI Artificial Intelligence Laboratory.
+        This EDL mission design is the final project associated with the course ASTE 577: Entry, Descent, & Landing for 
+        Planetary Surface Exploration, taught at USC by Dr. Anita Sengupta. The proposed mission involves sending an unmanned 
+        undersea vehicle (UUV) to the liquid methane sea, Kraken Mare, on Saturn's moon Titan. 
+        Titan is the only celestial body in the solar system other than Earth to have bodies of liquid on its surface. 
+        As such, its hydrocarbon seas have become a target of investigation for scientists. 
+        It is hypothesized these bodies of liquid may support life similar to that found near Earth's deep sea hydrothermal vents.
+      </p>
+
+      <p>
+        The presentation below provides a concise explanation of the mission architecture. 
+        The report shown underneath the presentation dives deeper into the mission requirements, EDL architecture, 
+        definition of entry and atmospheric conditions, vehicle sizing, and communication system sizing.
       </p>
 
     </section>
 
-    <div class="abstract-image">
-      <img src="images/abstract.JPG" alt="Abstract">
-    </div>
+  <!-- Top PDF (slides) -->
+  <div class="pdf-container">
+    <iframe id="pdf-frame-top" src="files/titan_edl_slides.pdf"></iframe>
+  </div>
+
+  <!-- Bottom PDF (report) -->
+  <div class="pdf-container">
+    <iframe id="pdf-frame-bottom" src="files/titan_edl_report.pdf"></iframe>
+  </div>
+
+  <script>
+    const iframeTop = document.getElementById('pdf-frame-top');
+    const iframeBottom = document.getElementById('pdf-frame-bottom');
+
+    function resizeIframes() {
+      if (window.innerWidth < 768) {
+        // On mobile: make both scale to viewport height minus header
+        iframeTop.style.height = (window.innerHeight - 150) + "px";
+        iframeBottom.style.height = (window.innerHeight - 150) + "px";
+      } else {
+        // On desktop: fixed heights
+        iframeTop.style.height = "600px";   // Slides
+        iframeBottom.style.height = "1150px"; // Report
+      }
+    }
+
+    window.addEventListener('resize', resizeIframes);
+    window.addEventListener('load', resizeIframes);
+  </script>
 
   </main>
 
