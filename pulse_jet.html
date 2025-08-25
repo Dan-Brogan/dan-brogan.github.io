@@ -166,36 +166,35 @@
       border-radius: 15px; /* optional: slight rounded corners */
     }
 
-    .gallery {
-      text-align: center;
-      margin: 2rem auto;
-      max-width: 1200px; /* keeps it from stretching too wide on huge screens */
-    }
-
-    .gallery h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
     .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
     }
 
-    /* Make sure images scale but keep aspect ratio */
-    .gallery-grid img {
+    .row {
+      display: grid;
+      gap: 1em;
+    }
+
+    .row-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .row-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .row-1 {
+      grid-template-columns: 1fr;
+    }
+
+    .row img {
       width: 100%;
       height: auto;
-      border: 2px solid black; /* optional outline */
-      border-radius: 15px;      /* optional rounded corners */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       object-fit: contain;
-    }
-
-    /* Special case: make Pulse9 span full width */
-    .gallery-grid img.wide {
-      grid-column: 1 / -1;
+      border: 2px solid black; /* optional border like you wanted earlier */
+      border-radius: 6px;
     }
 
     /* ===== Responsive ===== */
@@ -254,28 +253,36 @@
 
     </section>
 
-    <section class="gallery">
-      <h2>Manufacturing Process Gallery</h2>
+<section class="gallery">
+  <h2>Manufacturing Process Gallery</h2>
 
-      <div class="gallery-grid">
-        <!-- Row 1: 2 landscape -->
-        <img src="images/Pulse1.png" alt="Pulse 1">
-        <img src="images/Pulse2.png" alt="Pulse 2">
+  <div class="gallery-grid">
+    <!-- Row 1: 2 landscape -->
+    <div class="row row-2">
+      <img src="images/Pulse1.png" alt="Pulse 1">
+      <img src="images/Pulse2.png" alt="Pulse 2">
+    </div>
 
-        <!-- Row 2: 3 portrait -->
-        <img src="images/Pulse3.png" alt="Pulse 3">
-        <img src="images/Pulse4.png" alt="Pulse 4">
-        <img src="images/Pulse5.png" alt="Pulse 5">
+    <!-- Row 2: 3 portrait -->
+    <div class="row row-3">
+      <img src="images/Pulse3.png" alt="Pulse 3">
+      <img src="images/Pulse4.png" alt="Pulse 4">
+      <img src="images/Pulse5.png" alt="Pulse 5">
+    </div>
 
-        <!-- Row 3: 3 portrait -->
-        <img src="images/Pulse6.png" alt="Pulse 6">
-        <img src="images/Pulse7.png" alt="Pulse 7">
-        <img src="images/Pulse8.png" alt="Pulse 8">
+    <!-- Row 3: 3 portrait -->
+    <div class="row row-3">
+      <img src="images/Pulse6.png" alt="Pulse 6">
+      <img src="images/Pulse7.png" alt="Pulse 7">
+      <img src="images/Pulse8.png" alt="Pulse 8">
+    </div>
 
-        <!-- Row 4: 1 wide landscape -->
-        <img src="images/Pulse9.png" alt="Pulse 9" class="wide">
-      </div>
-    </section>
+    <!-- Row 4: 1 wide landscape -->
+    <div class="row row-1">
+      <img src="images/Pulse9.png" alt="Pulse 9">
+    </div>
+  </div>
+</section>
 
   </main>
 
